@@ -1,0 +1,47 @@
+{
+  "title": "Temporal Data Leakage Detection Toolkit for CI/CD Build Prediction",
+  "description": "Complete replication package for PLOS ONE paper: A taxonomy for detecting and preventing temporal data leakage in machine learning-based build prediction. Includes 3-type leakage taxonomy, dual-platform datasets (TravisTorrent + GHALogs), and ML training pipelines.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Rangari, Amit",
+      "affiliation": "JPMorgan Chase & Co"
+    },
+    {
+      "name": "Mishra, Lalit Narayan",
+      "affiliation": "Lowe's Companies, Inc."
+    },
+    {
+      "name": "Nagrare, Sandesh",
+      "affiliation": "Vidyalankar Institute of Technology"
+    },
+    {
+      "name": "Nayak, Saroj Kumar",
+      "affiliation": "Amrita School of Computing, Amrita Vishwa Vidyapeetham"
+    }
+  ],
+  "keywords": [
+    "build prediction",
+    "CI/CD",
+    "continuous integration",
+    "data leakage",
+    "temporal data leakage",
+    "machine learning",
+    "software engineering",
+    "TravisTorrent",
+    "GitHub Actions"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.10154920",
+      "relation": "cites",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "10.5281/zenodo.1254890",
+      "relation": "cites",
+      "resource_type": "dataset"
+    }
+  ]
+}
