@@ -6,6 +6,7 @@ version: 1.0.0
 date-released: 2025-11-18
 repository-code: "https://github.com/lnm8910/build-prediction-ci-cd-app"
 license: MIT
+doi: 10.5281/zenodo.17745227
 
 authors:
   - family-names: "Rangari"
