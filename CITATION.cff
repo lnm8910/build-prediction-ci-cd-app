@@ -6,7 +6,6 @@ version: 1.0.0
 date-released: 2025-11-18
 repository-code: "https://github.com/lnm8910/plos-one-build-prediction"
 license: MIT
-doi: 10.5281/zenodo.17451795
 
 authors:
   - family-names: "Rangari"

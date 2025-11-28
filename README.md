@@ -1,7 +1,6 @@
 # Temporal Data Leakage Prevention in CI/CD Build Prediction
 ## Replication Package for PLOS ONE Submission
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17451795.svg)](https://doi.org/10.5281/zenodo.17451795)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
@@ -263,11 +262,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **🔖 Keywords:** Build Prediction, CI/CD, Continuous Integration, Data Leakage, Machine Learning, Temporal Validation, TravisTorrent, GitHub Actions, Software Engineering, DevOps, Reproducibility
-
-**⭐ If you find this repository useful, please consider giving it a star!**
-
----
-
-**Status:** Complete replication package for PLOS ONE submission
-**Last Updated:** November 2025
-**Zenodo DOI:** 10.5281/zenodo.17451795
