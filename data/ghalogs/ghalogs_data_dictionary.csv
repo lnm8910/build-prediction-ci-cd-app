@@ -1,0 +1,34 @@
+feature,description,data_type,unit,category,leakage_type,availability,min_value,max_value,example
+repo_name,Full repository name (owner/repo),string,text,Metadata,CLEAN,ALWAYS_AVAILABLE,N/A,N/A,microsoft/vscode
+head_sha,Commit SHA hash,string,hexadecimal,Metadata,CLEAN,ALWAYS_AVAILABLE,N/A,N/A,a1b2c3d4e5f6
+conclusion,Workflow run outcome,string,categorical,Target,TYPE_1_DIRECT_OUTCOME,AFTER_BUILD,N/A,N/A,success|failure
+run_number,Sequential workflow run count,integer,count,Build History,CLEAN,BEFORE_BUILD,1,999999,142
+created_at,Workflow creation timestamp,datetime,ISO8601,Metadata,CLEAN,ALWAYS_AVAILABLE,N/A,N/A,2023-10-15T10:30:00Z
+language,Primary programming language,string,categorical,Project Maturity,CLEAN,ALWAYS_AVAILABLE,N/A,N/A,Python|Java|JavaScript|Ruby
+size,Repository size,integer,kilobytes,Project Maturity,CLEAN,BEFORE_BUILD,0,10000000,15234
+commits,Total commit count,integer,count,Project Maturity,CLEAN,BEFORE_BUILD,1,1000000,8452
+contributors,Number of contributors,integer,count,Project Maturity,CLEAN,BEFORE_BUILD,1,10000,47
+code_lines,Total lines of code (SLOC),integer,lines,Project Maturity,CLEAN,BEFORE_BUILD,0,10000000,125430
+git_files_changed,Files changed in triggering commit,integer,count,Code Complexity,CLEAN,BEFORE_BUILD,0,1000,23
+git_lines_added,Lines added in commit,integer,lines,Code Complexity,CLEAN,BEFORE_BUILD,0,100000,145
+git_lines_deleted,Lines deleted in commit,integer,lines,Code Complexity,CLEAN,BEFORE_BUILD,0,100000,78
+git_total_changes,Total lines changed (added + deleted),integer,lines,Code Complexity,CLEAN,BEFORE_BUILD,0,200000,223
+commit_message_length,Commit message character count,integer,characters,Commit Context,CLEAN,BEFORE_BUILD,0,10000,187
+commit_is_merge,Boolean: is merge commit,boolean,binary,Commit Context,CLEAN,BEFORE_BUILD,0,1,0|1
+commit_author,Commit author username,string,text,Metadata,CLEAN,ALWAYS_AVAILABLE,N/A,N/A,octocat
+files_src_changed,Source code files changed,integer,count,Code Complexity,CLEAN,BEFORE_BUILD,0,500,12
+files_test_changed,Test files changed,integer,count,Test Structure,CLEAN,BEFORE_BUILD,0,200,3
+files_config_changed,Configuration files changed,integer,count,Code Complexity,CLEAN,BEFORE_BUILD,0,100,1
+files_doc_changed,Documentation files changed,integer,count,Code Complexity,CLEAN,BEFORE_BUILD,0,100,2
+churn_ratio,Code churn ratio (deleted/added),float,ratio,Code Complexity,CLEAN,BEFORE_BUILD,0.0,10.0,0.54
+repo_age_days,Repository age in days,integer,days,Project Maturity,CLEAN,BEFORE_BUILD,0,10000,1247
+repo_has_wiki,Boolean: repository has wiki,boolean,binary,Project Maturity,CLEAN,BEFORE_BUILD,0,1,1
+repo_default_branch,Default branch name,string,categorical,Metadata,CLEAN,ALWAYS_AVAILABLE,N/A,N/A,main|master
+hist_commits_count,Historical commit count,integer,count,Build History,CLEAN,BEFORE_BUILD,0,1000000,8234
+hist_avg_churn,Historical average code churn,float,lines,Build History,CLEAN,BEFORE_BUILD,0.0,100000.0,234.5
+hist_unique_authors,Historical unique author count,integer,count,Build History,CLEAN,BEFORE_BUILD,0,10000,42
+hist_merge_ratio,Historical merge commit ratio,float,ratio,Build History,CLEAN,BEFORE_BUILD,0.0,1.0,0.34
+repo_stars,Repository star count (TIME-DEPENDENT),integer,count,Project Maturity,TYPE_3_FUTURE_INFORMATION,TIME_DEPENDENT,0,1000000,4523
+repo_forks,Repository fork count (TIME-DEPENDENT),integer,count,Project Maturity,TYPE_3_FUTURE_INFORMATION,TIME_DEPENDENT,0,100000,892
+repo_watchers,Repository watcher count (TIME-DEPENDENT),integer,count,Project Maturity,TYPE_3_FUTURE_INFORMATION,TIME_DEPENDENT,0,100000,4523
+repo_open_issues,Open issues count (TIME-DEPENDENT),integer,count,Project Maturity,TYPE_3_FUTURE_INFORMATION,TIME_DEPENDENT,0,100000,78

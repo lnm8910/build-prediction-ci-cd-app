@@ -1,0 +1,95 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite both the software and the paper as below."
+type: software
+title: "Temporal Data Leakage Detection Toolkit for CI/CD Build Prediction"
+version: 1.0.0
+date-released: 2025-11-18
+repository-code: "https://github.com/lnm8910/plos-one-build-prediction"
+license: MIT
+doi: 10.5281/zenodo.17451795
+
+authors:
+  - family-names: "Rangari"
+    given-names: "Amit"
+    email: "amitrangari@gmail.com"
+    affiliation: "JPMorgan Chase & Co"
+    city: "Atlanta, GA"
+    country: "US"
+
+  - family-names: "Mishra"
+    given-names: "Lalit Narayan"
+    email: "lnm8910@gmail.com"
+    affiliation: "Lowe's Companies, Inc."
+    city: "Charlotte, NC"
+    country: "US"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+
+  - family-names: "Nagrare"
+    given-names: "Sandesh"
+    email: "sandesh.nagrare@vit.edu.in"
+    affiliation: "Vidyalankar Institute of Technology"
+    city: "Mumbai"
+    country: "IN"
+
+  - family-names: "Nayak"
+    given-names: "Saroj Kumar"
+    email: "saroj.nayak@cb.amrita.edu"
+    affiliation: "Amrita School of Computing, Amrita Vishwa Vidyapeetham"
+    city: "Coimbatore"
+    country: "IN"
+
+keywords:
+  - "build prediction"
+  - "continuous integration"
+  - "CI/CD"
+  - "data leakage"
+  - "temporal data leakage"
+  - "machine learning"
+  - "software engineering"
+  - "random forest"
+  - "Travis CI"
+  - "GitHub Actions"
+  - "reproducibility"
+  - "empirical study"
+
+preferred-citation:
+  type: article
+  title: "A taxonomy for detecting and preventing temporal data leakage in machine learning-based build prediction: A dual-platform empirical validation"
+  authors:
+    - family-names: "Rangari"
+      given-names: "Amit"
+    - family-names: "Mishra"
+      given-names: "Lalit Narayan"
+    - family-names: "Nagrare"
+      given-names: "Sandesh"
+    - family-names: "Nayak"
+      given-names: "Saroj Kumar"
+  journal: "PLOS ONE"
+  year: 2025
+  volume: XX
+  issue: X
+  start: eXXXXXXX
+  doi: "10.1371/journal.pone.XXXXXXX"
+
+references:
+  - type: dataset
+    title: "TravisTorrent: Synthesizing Travis CI and GitHub for Full-Stack Research on Continuous Integration"
+    authors:
+      - family-names: "Beller"
+        given-names: "Moritz"
+      - family-names: "Gousios"
+        given-names: "Georgios"
+      - family-names: "Zaidman"
+        given-names: "Andy"
+    year: 2017
+    doi: "10.1109/MSR.2017.24"
+
+  - type: dataset
+    title: "GHALogs: A Large-Scale Dataset of GitHub Actions Logs"
+    authors:
+      - family-names: "Decan"
+        given-names: "Alexandre"
+      - family-names: "Mens"
+        given-names: "Tom"
+    year: 2024
+    doi: "10.5281/zenodo.10154920"

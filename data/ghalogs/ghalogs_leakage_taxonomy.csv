@@ -1,0 +1,34 @@
+feature,leakage_type,category,use_in_prediction,reasoning
+repo_name,CLEAN,Metadata,NO,Repository identifier (not predictive)
+head_sha,CLEAN,Metadata,NO,Commit SHA identifier (not predictive)
+conclusion,TYPE_1_DIRECT_OUTCOME,Target,NO,THIS IS THE PREDICTION TARGET (workflow outcome)
+run_number,CLEAN,Build History,YES,Sequential workflow run number assigned before execution
+created_at,CLEAN,Metadata,NO,Workflow creation timestamp (for temporal splitting only)
+language,CLEAN,Project Maturity,YES,Primary programming language (static metadata)
+size,CLEAN,Project Maturity,YES,Repository size in KB (pre-build metadata)
+commits,CLEAN,Project Maturity,YES,Total commit count (historical data)
+contributors,CLEAN,Project Maturity,YES,Number of contributors (historical analysis)
+code_lines,CLEAN,Project Maturity,YES,Total lines of code (static code analysis)
+git_files_changed,CLEAN,Code Complexity,YES,Files changed in triggering commit (from commit diff)
+git_lines_added,CLEAN,Code Complexity,YES,Lines added in commit (from commit diff)
+git_lines_deleted,CLEAN,Code Complexity,YES,Lines deleted in commit (from commit diff)
+git_total_changes,CLEAN,Code Complexity,YES,Total line changes (added + deleted)
+commit_message_length,CLEAN,Commit Context,YES,Character count of commit message
+commit_is_merge,CLEAN,Commit Context,YES,Boolean: is merge commit
+commit_author,CLEAN,Metadata,NO,Commit author username (identifier not feature)
+files_src_changed,CLEAN,Code Complexity,YES,Source files changed in commit
+files_test_changed,CLEAN,Test Structure,YES,Test files changed in commit
+files_config_changed,CLEAN,Code Complexity,YES,Configuration files changed
+files_doc_changed,CLEAN,Code Complexity,YES,Documentation files changed
+churn_ratio,CLEAN,Code Complexity,YES,Ratio of lines deleted to lines added
+repo_stars,TYPE_3_FUTURE_INFORMATION,Project Maturity,NO,Star count changes AFTER workflow run (time-dependent popularity)
+repo_forks,TYPE_3_FUTURE_INFORMATION,Project Maturity,NO,Fork count changes AFTER workflow run (time-dependent)
+repo_watchers,TYPE_3_FUTURE_INFORMATION,Project Maturity,NO,Watcher count changes AFTER workflow run (time-dependent)
+repo_open_issues,TYPE_3_FUTURE_INFORMATION,Project Maturity,NO,Issue count changes AFTER workflow run (dynamic metric)
+repo_age_days,CLEAN,Project Maturity,YES,Repository age in days (static calculation from creation date)
+repo_has_wiki,CLEAN,Project Maturity,YES,Boolean: repository has wiki (static metadata)
+repo_default_branch,CLEAN,Metadata,YES,Default branch name (static configuration)
+hist_commits_count,CLEAN,Build History,YES,Historical commit count from prior workflows
+hist_avg_churn,CLEAN,Build History,YES,Historical average code churn (from past commits)
+hist_unique_authors,CLEAN,Build History,YES,Historical unique author count
+hist_merge_ratio,CLEAN,Build History,YES,Historical merge commit ratio

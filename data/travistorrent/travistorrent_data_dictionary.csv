@@ -1,0 +1,83 @@
+feature,description,data_type,unit,category,leakage_type,availability,reasoning
+git_diff_src_churn,Source code churn in commit,integer,lines,Code Complexity,CLEAN,BEFORE_BUILD,Computable from commit diff before build
+gh_diff_files_added,Number of files added in commit,integer,count,Code Complexity,CLEAN,BEFORE_BUILD,Available from commit metadata
+gh_diff_files_deleted,Number of files deleted in commit,integer,count,Code Complexity,CLEAN,BEFORE_BUILD,Available from commit metadata
+gh_diff_files_modified,Number of files modified in commit,integer,count,Code Complexity,CLEAN,BEFORE_BUILD,Available from commit metadata
+gh_diff_src_files,Source files changed in commit,integer,count,Code Complexity,CLEAN,BEFORE_BUILD,Computable from commit diff
+gh_diff_doc_files,Documentation files changed,integer,count,Code Complexity,CLEAN,BEFORE_BUILD,Computable from commit diff
+gh_diff_other_files,Other files changed,integer,count,Code Complexity,CLEAN,BEFORE_BUILD,Computable from commit diff
+gh_sloc,Source lines of code,integer,lines,Project Maturity,CLEAN,BEFORE_BUILD,Static code analysis before build
+gh_description_complexity,Project description complexity,float,score,Project Maturity,CLEAN,BEFORE_BUILD,Metadata analysis
+gh_num_commits_in_push,Commits in triggering push,integer,count,Commit Context,CLEAN,BEFORE_BUILD,Available from push event
+gh_num_commits_on_files_touched,Commits on modified files,integer,count,Build History,CLEAN,BEFORE_BUILD,Historical analysis
+code_churn_rate,Rate of code churn,float,lines/day,Code Complexity,CLEAN,BEFORE_BUILD,Computed from commit history
+files_changed_total,Total files changed,integer,count,Code Complexity,CLEAN,BEFORE_BUILD,Sum from commit metadata
+commit_frequency,Recent commit frequency,float,commits/day,Build History,CLEAN,BEFORE_BUILD,Computed from prior commits
+tr_build_id,Travis CI build identifier,integer,id,Metadata,CLEAN,ALWAYS_AVAILABLE,Unique build identifier
+tr_build_number,Sequential build number,integer,count,Build History,CLEAN,BEFORE_BUILD,Assigned before execution
+tr_duration,Build execution duration,integer,seconds,Build Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Only available after build completes
+tr_log_buildduration,Build duration from logs,integer,seconds,Build Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Extracted from completed build logs
+tr_log_setup_time,Setup phase duration,integer,seconds,Build Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Only available after setup completes
+tr_status,Build status (passed/failed/errored),string,categorical,Target,TYPE_1_DIRECT_OUTCOME,AFTER_BUILD,Direct encoding of prediction target
+tr_log_status,Build status from logs,string,categorical,Target,TYPE_1_DIRECT_OUTCOME,AFTER_BUILD,Duplicate of outcome variable
+git_prev_commit_resolution_status,Previous commit build status,string,categorical,Build History,CLEAN,BEFORE_BUILD,Historical information before current build
+build_success,Build outcome (0=fail 1=success),boolean,binary,Target,TYPE_1_DIRECT_OUTCOME,AFTER_BUILD,This IS the prediction target
+build_time_minutes,Build time in minutes,float,minutes,Build Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Derived from tr_duration (post-build)
+setup_time_minutes,Setup time in minutes,float,minutes,Build Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Derived from tr_log_setup_time (post-build)
+build_efficiency,Build efficiency score,float,ratio,Build Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Requires duration measurements (post-build)
+git_diff_test_churn,Test code churn,integer,lines,Test Structure,CLEAN,BEFORE_BUILD,Computable from commit diff
+gh_diff_tests_added,Test files added,integer,count,Test Structure,CLEAN,BEFORE_BUILD,Available from commit metadata
+gh_diff_tests_deleted,Test files deleted,integer,count,Test Structure,CLEAN,BEFORE_BUILD,Available from commit metadata
+gh_test_lines_per_kloc,Test lines per 1000 LOC,float,lines/KLOC,Test Structure,CLEAN,BEFORE_BUILD,Static code analysis metric
+gh_test_cases_per_kloc,Test cases per 1000 LOC,float,tests/KLOC,Test Structure,CLEAN,BEFORE_BUILD,Static analysis before build
+gh_asserts_cases_per_kloc,Assertions per 1000 LOC,float,asserts/KLOC,Test Structure,CLEAN,BEFORE_BUILD,Static analysis before build
+tr_log_bool_tests_ran,Boolean: tests executed,boolean,binary,Test Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Only known after build runs tests
+tr_log_bool_tests_failed,Boolean: any tests failed,boolean,binary,Test Metrics,TYPE_1_DIRECT_OUTCOME,AFTER_BUILD,Direct indicator of test outcome
+tr_log_num_tests_ok,Number of passing tests,integer,count,Test Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Test results available post-execution
+tr_log_num_tests_failed,Number of failing tests,integer,count,Test Metrics,TYPE_1_DIRECT_OUTCOME,AFTER_BUILD,Direct encoding of test failures
+tr_log_num_tests_run,Total tests executed,integer,count,Test Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Test execution count post-build
+tr_log_num_tests_skipped,Number of skipped tests,integer,count,Test Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Only known after test execution
+tr_log_num_test_suites_run,Test suites executed,integer,count,Test Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Suite count post-execution
+tr_log_num_test_suites_ok,Passing test suites,integer,count,Test Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Suite results post-execution
+tr_log_num_test_suites_failed,Failing test suites,integer,count,Test Metrics,TYPE_1_DIRECT_OUTCOME,AFTER_BUILD,Direct encoding of suite failures
+test_success_rate,Percentage of passing tests,float,percentage,Test Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Computed from test results
+test_suite_failure_rate,Test suite failure percentage,float,percentage,Test Metrics,TYPE_1_DIRECT_OUTCOME,AFTER_BUILD,Direct indicator of test outcomes
+test_coverage_delta,Change in test coverage,float,percentage,Test Metrics,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Requires coverage computation post-build
+gh_team_size,Number of team members,integer,count,Team Metrics,CLEAN,BEFORE_BUILD,Historical team analysis
+gh_by_core_team_member,Commit by core team member,boolean,binary,Team Metrics,CLEAN,BEFORE_BUILD,Team membership known before build
+gh_is_pr,Is pull request,boolean,binary,Build Context,CLEAN,BEFORE_BUILD,Known from build trigger event
+gh_num_pr_comments,Pull request comment count,integer,count,Team Metrics,CLEAN,BEFORE_BUILD,PR metadata before build
+gh_num_issue_comments,Issue comment count,integer,count,Team Metrics,CLEAN,BEFORE_BUILD,Issue metadata before build
+gh_pr_intra_branch,PR within same repository,boolean,binary,Build Context,CLEAN,BEFORE_BUILD,PR metadata before build
+gh_project_age_days,Project age in days,integer,days,Project Maturity,CLEAN,BEFORE_BUILD,Computed from creation date
+gh_commits_count,Total commit count,integer,count,Project Maturity,CLEAN,BEFORE_BUILD,Historical commit data
+gh_contributors_count,Number of contributors,integer,count,Project Maturity,CLEAN,BEFORE_BUILD,Historical contributor analysis
+gh_total_stars,Repository star count,integer,count,Project Maturity,TYPE_3_FUTURE_INFORMATION,TIME_DEPENDENT,Stars change after build time
+gh_total_forks,Repository fork count,integer,count,Project Maturity,TYPE_3_FUTURE_INFORMATION,TIME_DEPENDENT,Forks change after build time
+gh_watchers_count,Repository watcher count,integer,count,Project Maturity,TYPE_3_FUTURE_INFORMATION,TIME_DEPENDENT,Watchers change after build time
+gh_project_maturity_days,Project maturity score,integer,days,Project Maturity,CLEAN,BEFORE_BUILD,Computed from development history
+git_repository_age_days,Repository age from first commit,integer,days,Project Maturity,CLEAN,BEFORE_BUILD,Static historical calculation
+gh_test_density,Tests per 1000 lines of code,float,tests/KLOC,Test Structure,CLEAN,BEFORE_BUILD,Static code analysis metric
+gh_src_complexity_avg,Average source file complexity,float,score,Code Complexity,CLEAN,BEFORE_BUILD,Static code analysis
+gh_src_complexity_max,Maximum source file complexity,float,score,Code Complexity,CLEAN,BEFORE_BUILD,Static code analysis
+gh_nesting_depth_avg,Average nesting depth,float,levels,Code Complexity,CLEAN,BEFORE_BUILD,Static code analysis
+gh_code_duplication_ratio,Code duplication percentage,float,percentage,Code Complexity,CLEAN,BEFORE_BUILD,Static code analysis
+gh_technical_debt_index,Technical debt index,float,score,Code Complexity,CLEAN,BEFORE_BUILD,Static code analysis metric
+gh_halstead_difficulty_avg,Average Halstead difficulty,float,score,Code Complexity,CLEAN,BEFORE_BUILD,Static code metric
+gh_maintainability_index,Maintainability index,float,score,Code Complexity,CLEAN,BEFORE_BUILD,Static code analysis
+gh_test_complexity_avg,Average test complexity,float,score,Test Structure,CLEAN,BEFORE_BUILD,Static test code analysis
+gh_assertion_density,Assertions per test,float,asserts/test,Test Structure,CLEAN,BEFORE_BUILD,Static test analysis
+gh_tests_count,Total test count,integer,count,Test Structure,CLEAN,BEFORE_BUILD,Static count from test files
+gh_test_classes_count,Test class count,integer,count,Test Structure,CLEAN,BEFORE_BUILD,Static analysis of test structure
+gh_test_assertions_count,Total assertion count,integer,count,Test Structure,CLEAN,BEFORE_BUILD,Static count from test code
+gh_test_lines_ratio,Test lines / total lines,float,ratio,Test Structure,CLEAN,BEFORE_BUILD,Ratio of test to source code
+gh_test_coverage_previous,Test coverage from last build,float,percentage,Test Metrics,CLEAN,BEFORE_BUILD,Historical coverage data (not current)
+gh_test_growth_rate,Test count growth rate,float,tests/day,Test Structure,CLEAN,BEFORE_BUILD,Trend from historical data
+tr_prev_build_duration,Previous build duration,integer,seconds,Build History,CLEAN,BEFORE_BUILD,Historical build data
+tr_prev_build_success,Previous build succeeded,boolean,binary,Build History,CLEAN,BEFORE_BUILD,Historical outcome (not current)
+tr_builds_last_30_days,Builds in last 30 days,integer,count,Build History,CLEAN,BEFORE_BUILD,Historical frequency metric
+tr_failure_streak,Consecutive failures,integer,count,Build History,CLEAN,BEFORE_BUILD,Historical failure pattern
+git_num_files_modified,Files modified in commit,integer,count,Commit Context,CLEAN,BEFORE_BUILD,Available from commit diff
+git_lines_added,Lines added in commit,integer,lines,Commit Context,CLEAN,BEFORE_BUILD,Available from commit diff
+git_lines_deleted,Lines deleted in commit,integer,lines,Commit Context,CLEAN,BEFORE_BUILD,Available from commit diff
+quality_score,Composite quality metric,float,score,Target,TYPE_2_EXECUTION_DEPENDENT,AFTER_BUILD,Computed from build + test results

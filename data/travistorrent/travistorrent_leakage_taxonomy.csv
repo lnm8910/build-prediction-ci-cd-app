@@ -1,0 +1,83 @@
+feature,leakage_type,category,use_in_prediction,reasoning
+git_diff_src_churn,CLEAN,Code Complexity,YES,Computable from commit diff before build execution
+gh_diff_files_added,CLEAN,Code Complexity,YES,Available from commit metadata
+gh_diff_files_deleted,CLEAN,Code Complexity,YES,Available from commit metadata
+gh_diff_files_modified,CLEAN,Code Complexity,YES,Available from commit metadata
+gh_diff_src_files,CLEAN,Code Complexity,YES,Computable from commit diff
+gh_diff_doc_files,CLEAN,Code Complexity,YES,Computable from commit diff
+gh_diff_other_files,CLEAN,Code Complexity,YES,Computable from commit diff
+gh_sloc,CLEAN,Project Maturity,YES,Static code analysis before build
+gh_description_complexity,CLEAN,Project Maturity,YES,Metadata analysis
+gh_num_commits_in_push,CLEAN,Commit Context,YES,Available from push event
+gh_num_commits_on_files_touched,CLEAN,Build History,YES,Historical analysis
+code_churn_rate,CLEAN,Code Complexity,YES,Computed from commit history
+files_changed_total,CLEAN,Code Complexity,YES,Sum from commit metadata
+commit_frequency,CLEAN,Build History,YES,Computed from prior commits
+tr_build_id,CLEAN,Metadata,NO,Identifier only (not predictive)
+tr_build_number,CLEAN,Build History,YES,Assigned before execution
+tr_duration,TYPE_2_EXECUTION_DEPENDENT,Build Metrics,NO,Only available after build completes
+tr_log_buildduration,TYPE_2_EXECUTION_DEPENDENT,Build Metrics,NO,Extracted from completed build logs
+tr_log_setup_time,TYPE_2_EXECUTION_DEPENDENT,Build Metrics,NO,Only available after setup phase completes
+tr_status,TYPE_1_DIRECT_OUTCOME,Target,NO,Direct encoding of build outcome (the target itself)
+tr_log_status,TYPE_1_DIRECT_OUTCOME,Target,NO,Duplicate encoding of outcome variable
+git_prev_commit_resolution_status,CLEAN,Build History,YES,Previous commit outcome (historical not current)
+build_success,TYPE_1_DIRECT_OUTCOME,Target,NO,THIS IS THE PREDICTION TARGET
+build_time_minutes,TYPE_2_EXECUTION_DEPENDENT,Build Metrics,NO,Derived from tr_duration (requires execution)
+setup_time_minutes,TYPE_2_EXECUTION_DEPENDENT,Build Metrics,NO,Derived from tr_log_setup_time (requires execution)
+build_efficiency,TYPE_2_EXECUTION_DEPENDENT,Build Metrics,NO,Computed from duration measurements (post-build)
+git_diff_test_churn,CLEAN,Test Structure,YES,Computable from commit diff
+gh_diff_tests_added,CLEAN,Test Structure,YES,Available from commit metadata
+gh_diff_tests_deleted,CLEAN,Test Structure,YES,Available from commit metadata
+gh_test_lines_per_kloc,CLEAN,Test Structure,YES,Static code analysis metric
+gh_test_cases_per_kloc,CLEAN,Test Structure,YES,Static analysis before build
+gh_asserts_cases_per_kloc,CLEAN,Test Structure,YES,Static analysis before build
+tr_log_bool_tests_ran,TYPE_2_EXECUTION_DEPENDENT,Test Metrics,NO,Only known after build executes tests
+tr_log_bool_tests_failed,TYPE_1_DIRECT_OUTCOME,Test Metrics,NO,Direct indicator of test failure (outcome)
+tr_log_num_tests_ok,TYPE_2_EXECUTION_DEPENDENT,Test Metrics,NO,Test results only available post-execution
+tr_log_num_tests_failed,TYPE_1_DIRECT_OUTCOME,Test Metrics,NO,Direct encoding of test failures
+tr_log_num_tests_run,TYPE_2_EXECUTION_DEPENDENT,Test Metrics,NO,Test execution count post-build
+tr_log_num_tests_skipped,TYPE_2_EXECUTION_DEPENDENT,Test Metrics,NO,Only known after test execution
+tr_log_num_test_suites_run,TYPE_2_EXECUTION_DEPENDENT,Test Metrics,NO,Suite execution count post-build
+tr_log_num_test_suites_ok,TYPE_2_EXECUTION_DEPENDENT,Test Metrics,NO,Suite results post-execution
+tr_log_num_test_suites_failed,TYPE_1_DIRECT_OUTCOME,Test Metrics,NO,Direct encoding of suite failures
+test_success_rate,TYPE_2_EXECUTION_DEPENDENT,Test Metrics,NO,Computed from test execution results
+test_suite_failure_rate,TYPE_1_DIRECT_OUTCOME,Test Metrics,NO,Direct indicator of test outcomes
+test_coverage_delta,TYPE_2_EXECUTION_DEPENDENT,Test Metrics,NO,Requires coverage computation post-build
+gh_team_size,CLEAN,Team Metrics,YES,Historical team analysis
+gh_by_core_team_member,CLEAN,Team Metrics,YES,Team membership known before build
+gh_is_pr,CLEAN,Build Context,YES,Known from build trigger event
+gh_num_pr_comments,CLEAN,Team Metrics,YES,PR metadata before build
+gh_num_issue_comments,CLEAN,Team Metrics,YES,Issue metadata before build
+gh_pr_intra_branch,CLEAN,Build Context,YES,PR metadata before build
+gh_project_age_days,CLEAN,Project Maturity,YES,Computed from creation date
+gh_commits_count,CLEAN,Project Maturity,YES,Historical commit data
+gh_contributors_count,CLEAN,Project Maturity,YES,Historical contributor analysis
+gh_total_stars,TYPE_3_FUTURE_INFORMATION,Project Maturity,NO,Star count changes after build time (time-dependent)
+gh_total_forks,TYPE_3_FUTURE_INFORMATION,Project Maturity,NO,Fork count changes after build time (time-dependent)
+gh_watchers_count,TYPE_3_FUTURE_INFORMATION,Project Maturity,NO,Watcher count changes after build time (time-dependent)
+gh_project_maturity_days,CLEAN,Project Maturity,YES,Computed from development history
+git_repository_age_days,CLEAN,Project Maturity,YES,Static historical calculation
+gh_test_density,CLEAN,Test Structure,YES,Static code analysis metric
+gh_src_complexity_avg,CLEAN,Code Complexity,YES,Static code analysis
+gh_src_complexity_max,CLEAN,Code Complexity,YES,Static code analysis
+gh_nesting_depth_avg,CLEAN,Code Complexity,YES,Static code analysis
+gh_code_duplication_ratio,CLEAN,Code Complexity,YES,Static code analysis
+gh_technical_debt_index,CLEAN,Code Complexity,YES,Static code analysis metric
+gh_halstead_difficulty_avg,CLEAN,Code Complexity,YES,Static code metric
+gh_maintainability_index,CLEAN,Code Complexity,YES,Static code analysis
+gh_test_complexity_avg,CLEAN,Test Structure,YES,Static test code analysis
+gh_assertion_density,CLEAN,Test Structure,YES,Static test analysis
+gh_tests_count,CLEAN,Test Structure,YES,Static count from test files
+gh_test_classes_count,CLEAN,Test Structure,YES,Static analysis of test structure
+gh_test_assertions_count,CLEAN,Test Structure,YES,Static count from test code
+gh_test_lines_ratio,CLEAN,Test Structure,YES,Ratio of test to source code
+gh_test_coverage_previous,CLEAN,Test Metrics,YES,Historical coverage (not current build's coverage)
+gh_test_growth_rate,CLEAN,Test Structure,YES,Trend from historical data
+tr_prev_build_duration,CLEAN,Build History,YES,Historical build data (not current)
+tr_prev_build_success,CLEAN,Build History,YES,Historical outcome (not current build)
+tr_builds_last_30_days,CLEAN,Build History,YES,Historical frequency metric
+tr_failure_streak,CLEAN,Build History,YES,Historical failure pattern
+git_num_files_modified,CLEAN,Commit Context,YES,Available from commit diff
+git_lines_added,CLEAN,Commit Context,YES,Available from commit diff
+git_lines_deleted,CLEAN,Commit Context,YES,Available from commit diff
+quality_score,TYPE_2_EXECUTION_DEPENDENT,Target,NO,Composite metric computed from build + test results
