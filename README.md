@@ -10,12 +10,8 @@ Complete replication package for the paper:
 **"A taxonomy for detecting and preventing temporal data leakage in machine learning-based build prediction: A dual-platform empirical validation"**
 
 📄 Journal: PLOS ONE
-👥 Authors: Amit Rangari¹, Lalit Narayan Mishra²*, Sandesh Nagrare³, Saroj Kumar Nayak⁴
+👥 Authors: Lalit Narayan Mishra¹*, Amit Rangari², Sandesh Nagrare³, Saroj Kumar Nayak⁴
 
-¹ JPMorgan Chase & Co, Atlanta, GA, USA
-² Lowe's Companies, Inc., Charlotte, NC, USA (Corresponding Author)
-³ Vidyalankar Institute of Technology, Mumbai, India
-⁴ Amrita School of Computing, Amrita Vishwa Vidyapeetham, India
 
 ---
 
@@ -229,19 +225,6 @@ If you use this code or data in your research, please cite our paper:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Contact
-
-**Corresponding Author:** Lalit Narayan Mishra
-- 📧 Email: lnm8910@gmail.com
-- 🏢 Affiliation: Lowe's Companies, Inc., Charlotte, NC, USA
-
-**Co-Authors:**
-- Amit Rangari (amitrangari@gmail.com) - JPMorgan Chase & Co
-- Sandesh Nagrare (sandesh.nagrare@vit.edu.in) - Vidyalankar Institute of Technology
-- Saroj Kumar Nayak (saroj.nayak@cb.amrita.edu) - Amrita School of Computing
 
 ---
 

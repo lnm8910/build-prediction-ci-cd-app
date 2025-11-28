@@ -9,6 +9,13 @@ license: MIT
 doi: 10.5281/zenodo.17745227
 
 authors:
+  - family-names: "Mishra"
+    given-names: "Lalit Narayan"
+    email: "lnm8910@gmail.com"
+    affiliation: "Lowe's Companies, Inc."
+    city: "Charlotte, NC"
+    country: "US"
+
   - family-names: "Rangari"
     given-names: "Amit"
     email: "amitrangari@gmail.com"
@@ -16,27 +23,19 @@ authors:
     city: "Atlanta, GA"
     country: "US"
 
-  - family-names: "Mishra"
-    given-names: "Lalit Narayan"
-    email: "lnm8910@gmail.com"
-    affiliation: "Lowe's Companies, Inc."
-    city: "Charlotte, NC"
-    country: "US"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
-
   - family-names: "Nagrare"
     given-names: "Sandesh"
-    email: "sandesh.nagrare@vit.edu.in"
-    affiliation: "Vidyalankar Institute of Technology"
-    city: "Mumbai"
-    country: "IN"
+    email: "sandesh.nagrare@gmail.com"
+    affiliation: ""
+    city: "NYC, NY"
+    country: "USA"
 
   - family-names: "Nayak"
     given-names: "Saroj Kumar"
-    email: "saroj.nayak@cb.amrita.edu"
-    affiliation: "Amrita School of Computing, Amrita Vishwa Vidyapeetham"
-    city: "Coimbatore"
-    country: "IN"
+    email: "mrsarojnayak@gmail.com"
+    affiliation: "Cognizant Technology Solutions"
+    city: "Charlotte, NC"
+    country: "USA"
 
 keywords:
   - "build prediction"
