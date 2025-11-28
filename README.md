@@ -91,7 +91,7 @@ plos-one-build-prediction-replication/
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/YOUR_USERNAME/plos-one-build-prediction.git
+git clone https://github.com/lnm8910/plos-one-build-prediction.git
 cd plos-one-build-prediction
 
 # 2. Create virtual environment (recommended)
@@ -255,9 +255,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Repository Stats
 
-![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/plos-one-build-prediction?style=social)
-![GitHub forks](https://img.shields.io/github/forks/YOUR_USERNAME/plos-one-build-prediction?style=social)
-![GitHub issues](https://img.shields.io/github/issues/YOUR_USERNAME/plos-one-build-prediction)
+![GitHub stars](https://img.shields.io/github/stars/lnm8910/plos-one-build-prediction?style=social)
+![GitHub forks](https://img.shields.io/github/forks/lnm8910/plos-one-build-prediction?style=social)
+![GitHub issues](https://img.shields.io/github/issues/lnm8910/plos-one-build-prediction)
 
 ---
 
