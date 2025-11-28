@@ -30,8 +30,8 @@
 ```bash
 # 1. Download/clone this repository
 # If from Zenodo: extract the archive
-unzip plos-one-build-prediction-replication.zip
-cd plos-one-build-prediction-replication
+unzip build-prediction-ci-cd-app.zip
+cd build-prediction-ci-cd-app
 
 # 2. Create virtual environment
 python3 -m venv venv

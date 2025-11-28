@@ -13,7 +13,7 @@
 
 ```bash
 # Clone or download this repository
-cd plos-one-build-prediction-replication
+cd build-prediction-ci-cd-app
 
 # Create virtual environment
 python3 -m venv venv
@@ -342,7 +342,7 @@ print(f"Clean model ROC-AUC: {roc_auc_score(y_test, y_proba)*100:.2f}%")
 
 ```bash
 # Solution: Ensure you're in the repository root and venv is activated
-cd /path/to/plos-one-build-prediction-replication
+cd /path/to/build-prediction-ci-cd-app
 source venv/bin/activate
 export PYTHONPATH="${PYTHONPATH}:$(pwd)"
 ```

@@ -54,7 +54,7 @@ This repository contains the complete implementation, data, and documentation fo
 ## Repository Structure
 
 ```
-plos-one-build-prediction-replication/
+build-prediction-ci-cd-app/
 ├── data/                    # Processed datasets
 │   ├── travistorrent/       # 100K builds, 31 clean features
 │   └── ghalogs/             # 75.7K workflows, 29 clean features
@@ -91,8 +91,8 @@ plos-one-build-prediction-replication/
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/lnm8910/plos-one-build-prediction.git
-cd plos-one-build-prediction
+git clone https://github.com/lnm8910/build-prediction-ci-cd-app.git
+cd build-prediction-ci-cd-app
 
 # 2. Create virtual environment (recommended)
 python3 -m venv venv
@@ -255,9 +255,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Repository Stats
 
-![GitHub stars](https://img.shields.io/github/stars/lnm8910/plos-one-build-prediction?style=social)
-![GitHub forks](https://img.shields.io/github/forks/lnm8910/plos-one-build-prediction?style=social)
-![GitHub issues](https://img.shields.io/github/issues/lnm8910/plos-one-build-prediction)
+![GitHub stars](https://img.shields.io/github/stars/lnm8910/build-prediction-ci-cd-app?style=social)
+![GitHub forks](https://img.shields.io/github/forks/lnm8910/build-prediction-ci-cd-app?style=social)
+![GitHub issues](https://img.shields.io/github/issues/lnm8910/build-prediction-ci-cd-app)
 
 ---
 

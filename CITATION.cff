@@ -4,7 +4,7 @@ type: software
 title: "Temporal Data Leakage Detection Toolkit for CI/CD Build Prediction"
 version: 1.0.0
 date-released: 2025-11-18
-repository-code: "https://github.com/lnm8910/plos-one-build-prediction"
+repository-code: "https://github.com/lnm8910/build-prediction-ci-cd-app"
 license: MIT
 
 authors:
